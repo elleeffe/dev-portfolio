@@ -1,54 +1,55 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from 'react';
+import { Link } from 'gatsby';
+import styled, { ThemeProvider } from 'styled-components';
+import theme from '../themes/main';
+import GlobalStyle from '../themes/GlobalStyle';
+import Seo from '../components/Seo';
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
-const NotFoundPage = () => {
+function NotFoundPage() {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Seo />
+      <Layout>
+        <Title>404</Title>
+        <SubTitle>Content not found</SubTitle>
+        <CustomLink to="/">Back to portfolio</CustomLink>
+      </Layout>
+    </ThemeProvider>
+  );
 }
 
-export default NotFoundPage
+export default NotFoundPage;
+
+const Layout = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+const Title = styled.h1`
+  font-size: 15vw;
+  color: ${(props) => props.theme.colors.success};
+  margin: 0;
+  line-height: 1;
+
+  @media ${(props) => props.theme.responsive.tabletSm} {
+    font-size: 20vw;
+  }
+`;
+const SubTitle = styled.h2`
+  font-size: 3vw;
+  color: ${(props) => props.theme.colors.white};
+  margin: 10px 0 15px;
+  line-height: 1;
+
+  @media ${(props) => props.theme.responsive.tabletSm} {
+    font-size: 5vw;
+  }
+`;
+const CustomLink = styled(Link)`
+  color: ${(props) => props.theme.colors.success};
+  cursor: pointer;
+`;
