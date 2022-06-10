@@ -2,7 +2,7 @@ type ThemeType = typeof theme;
 
 const theme = {
   fonts: {
-    poppins: 'Poppins, sans-serif',
+    girloy: 'Gilroy',
   },
   responsive: {
     phoneSm: '(max-width: 400px)',

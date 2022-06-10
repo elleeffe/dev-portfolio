@@ -51,7 +51,7 @@ const MyInput = styled.input<{ error?: boolean }>`
   transition: all 200ms ease;
   border-bottom: 1px solid ${(props) => props.theme.colors.offWhite};
   caret-color: ${(props) => props.theme.colors.success};
-  font-family: ${(props) => props.theme.fonts.poppins};
+  font-family: ${(props) => props.theme.fonts.gilroy};
   font-size: 15px;
   color: ${(props) => props.theme.colors.offWhite};
   padding: 7px 0px;

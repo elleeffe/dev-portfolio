@@ -47,7 +47,7 @@ const MyTextarea = styled.textarea<{ error?: boolean }>`
   border: none;
   background: none;
   transition: all 200ms ease;
-  font-family: ${(props) => props.theme.fonts.poppins};
+  font-family: ${(props) => props.theme.fonts.gilroy};
   border-bottom: 1px solid ${(props) => props.theme.colors.offWhite};
   caret-color: ${(props) => props.theme.colors.success};
   font-size: 15px;

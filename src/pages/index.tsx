@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import theme from '../themes/main';
 import GlobalStyle from '../themes/GlobalStyle';
-import Login from '../components/Login';
 import ProfileCard from '../components/ProfileCard';
 import AboutCard from '../components/contents/AboutCard';
 import ResumeCard from '../components/contents/ResumeCard';
@@ -22,7 +21,7 @@ function IndexPage() {
 
   let scrollPos = typeof window !== 'undefined' && window.pageYOffset;
 
-  const handleScroll = () => {
+  const handleScroll1 = () => {
     const sections = document.querySelectorAll('section');
     Array.from(sections).forEach((current: HTMLElement) => {
       const sectionHeight = current.offsetHeight;
@@ -62,20 +61,19 @@ function IndexPage() {
       setCount(true);
     }
 
+    const handleScroll = () => {
+      handleScroll1();
+      handleScroll2();
+    };
+
     if (window.matchMedia('(max-width: 1100px)').matches) {
-      window.addEventListener('scroll', () => {
-        handleScroll();
-        handleScroll2();
-      });
+      window.addEventListener('scroll', handleScroll);
       return;
     }
 
     return () => {
       if (window.matchMedia('(max-width: 1100px)').matches) {
-        window.removeEventListener('scroll', () => {
-          handleScroll();
-          handleScroll2();
-        });
+        window.removeEventListener('scroll', handleScroll);
       }
     };
   }, []);
@@ -95,27 +93,21 @@ function IndexPage() {
       <GlobalStyle />
       <Seo />
       <MyParticles />
-      {!alreadyLogged ? (
-        <Login onLogin={() => setAlreadyLogged(true)} />
-      ) : (
-        <>
-          <Preloader hide={hide} count={count} />
-          <Wrapper show={hide}>
-            <CardsWrapper>
-              <Menu
-                onClick={(num) => setActiveSection(num)}
-                section={activeSection}
-                scrolling={scrollNav}
-              />
-              <ProfileCard onClick={(num) => setActiveSection(num)} />
-              <AboutCard active={activeSection === 1} />
-              <ResumeCard active={activeSection === 2} />
-              <WorksCard active={activeSection === 3} />
-              <ContactCard active={activeSection === 4} />
-            </CardsWrapper>
-          </Wrapper>
-        </>
-      )}
+      <Preloader hide={hide} count={count} />
+      <Wrapper show={hide}>
+        <CardsWrapper>
+          <Menu
+            onClick={(num) => setActiveSection(num)}
+            section={activeSection}
+            scrolling={scrollNav}
+          />
+          <ProfileCard onClick={(num) => setActiveSection(num)} />
+          <AboutCard active={activeSection === 1} />
+          <ResumeCard active={activeSection === 2} />
+          <WorksCard active={activeSection === 3} />
+          <ContactCard active={activeSection === 4} />
+        </CardsWrapper>
+      </Wrapper>
     </ThemeProvider>
   );
 }
