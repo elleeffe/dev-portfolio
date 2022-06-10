@@ -13,7 +13,6 @@ import Seo from '../components/Seo';
 import MyParticles from '../components/MyParticles';
 
 function IndexPage() {
-  const [alreadyLogged, setAlreadyLogged] = useState(false);
   const [activeSection, setActiveSection] = useState(1);
   const [count, setCount] = useState(true);
   const [hide, setHide] = useState(false);
@@ -55,12 +54,6 @@ function IndexPage() {
   };
 
   useEffect(() => {
-    const checkLogged = localStorage.getItem('isLogged');
-    if (checkLogged === 'true') {
-      setAlreadyLogged(true);
-      setCount(true);
-    }
-
     const handleScroll = () => {
       handleScroll1();
       handleScroll2();
@@ -80,13 +73,11 @@ function IndexPage() {
 
   // Initial Preloader
   useEffect(() => {
-    if (alreadyLogged) {
-      setCount(true);
-      setTimeout(() => {
-        setHide(true);
-      }, 1200);
-    }
-  }, [count, alreadyLogged]);
+    setCount(true);
+    setTimeout(() => {
+      setHide(true);
+    }, 1200);
+  }, [count]);
 
   return (
     <ThemeProvider theme={theme}>
