@@ -1,17 +1,16 @@
 import React from 'react';
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { TitleH2 } from './Typography';
 
 type PreloaderProps = {
-  count: boolean;
   hide?: boolean;
 }
 
-function Preloader({ hide, count }: PreloaderProps) {
+function Preloader({ hide }: PreloaderProps) {
   return (
     <Wrap hide={hide}>
       <TitleH2>Welcome</TitleH2>
-      <Bar startCount={count} />
+      <Bar />
     </Wrap>
   );
 }
@@ -26,9 +25,6 @@ const counter = keyframes`
     transform: scaleX(100%)
   }
 `;
-const animation = css`
-    animation: 800ms linear ${counter};
-  `;
 
 const Wrap = styled.div<{ hide?: boolean }>`
   display: flex;
@@ -67,7 +63,7 @@ const Wrap = styled.div<{ hide?: boolean }>`
   }
 `;
 
-const Bar = styled.div<{ startCount: boolean }>`
+const Bar = styled.div`
   width: 250px;
   height: 3px;
   background: ${(props) => props.theme.colors.offWhite};
@@ -82,6 +78,6 @@ const Bar = styled.div<{ startCount: boolean }>`
     position: absolute;
     top: 0;
     left: 0;
-    ${(props) => (props.startCount ? animation : null)};
+    animation: 800ms linear ${counter};
   }
 `;

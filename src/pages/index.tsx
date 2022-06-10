@@ -14,7 +14,6 @@ import MyParticles from '../components/MyParticles';
 
 function IndexPage() {
   const [activeSection, setActiveSection] = useState(1);
-  const [count, setCount] = useState(true);
   const [hide, setHide] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
 
@@ -73,18 +72,17 @@ function IndexPage() {
 
   // Initial Preloader
   useEffect(() => {
-    setCount(true);
     setTimeout(() => {
       setHide(true);
     }, 1200);
-  }, [count]);
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Seo />
       <MyParticles />
-      <Preloader hide={hide} count={count} />
+      <Preloader hide={hide} />
       <Wrapper show={hide}>
         <CardsWrapper>
           <Menu
