@@ -9,7 +9,7 @@ type PreloaderProps = {
 function Preloader({ hide }: PreloaderProps) {
   return (
     <Wrap hide={hide}>
-      <TitleH2>Welcome</TitleH2>
+      <TitleH2>Benvenuto/a</TitleH2>
       <Bar />
     </Wrap>
   );

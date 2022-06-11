@@ -5,6 +5,7 @@ import Email2Icon from './icons/Email2';
 import WorkIcon from './icons/Work';
 import ResumeIcon from './icons/Resume';
 import profilo from '../assets/images/profilo.jpeg';
+import logo from '../assets/images/logo.png';
 
 type MenuProps = {
   onClick: (num: number) => void;
@@ -31,11 +32,11 @@ function Menu({ onClick, section, scrolling }: MenuProps) {
         <Avatar>
           <Image src={profilo} />
           <div>
-            <Name>Jhon Doe</Name>
+            <Name>Lorenzo Faenzi</Name>
             <Role>Front-end developer</Role>
           </div>
         </Avatar>
-        <Logo>LF</Logo>
+        <Logo><img src={logo} alt="Lorenzo Faenzi logo" /></Logo>
       </AvatarWrap>
       <LinkWrap>
         <CardLink
@@ -158,6 +159,10 @@ const Logo = styled.div`
   font-size: 25px;
   font-weight: 700;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+
+  img {
+    max-width: 50%
+  }
 
   @media ${(props) => props.theme.responsive.phone} {
     border-radius: 0px;

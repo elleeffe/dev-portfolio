@@ -13,7 +13,7 @@ type ContentCardProps = {
 function ContactCard({ active }: ContentCardProps) {
   return (
     <ContentCard active={active} id="contact">
-      <TitleH3>My Contacts</TitleH3>
+      <TitleH3>I miei contatti</TitleH3>
       <FlexWrap>
         <div>
           <TitleH5 green>Email:</TitleH5>
@@ -24,7 +24,7 @@ function ContactCard({ active }: ContentCardProps) {
           </IconLink>
         </div>
         <div>
-          <TitleH5 green>Phone:</TitleH5>
+          <TitleH5 green>Telefono:</TitleH5>
           <IconLink
             href="#"
           >
@@ -32,13 +32,10 @@ function ContactCard({ active }: ContentCardProps) {
           </IconLink>
         </div>
       </FlexWrap>
-      <TitleH4>Quickly message</TitleH4>
+      <TitleH4>Inviami un messaggio</TitleH4>
       <Text>
-        Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
-        <br />
-        Aenean ac nisi aliquet, euismod nisi eget,
-        faucibus lectus.
+        Scrivimi direttamente dal form qui sotto,
+        verrete ricontattati entro 24h.
       </Text>
       <Form />
     </ContentCard>

@@ -100,20 +100,20 @@ function Form() {
       <FlexWrap>
         <CustomInput
           type="text"
-          placeholder="Full name"
+          placeholder="Nome"
           onChange={(value: string) => handleName(value)}
           error={errorName}
           value={name}
         />
         <CustomInput
           type="text"
-          placeholder="Your email"
+          placeholder="Email"
           onChange={(value: string) => handleEmail(value)}
           error={errorEmail}
           value={email}
         />
         <Textarea
-          placeholder="Your message"
+          placeholder="Messaggio"
           onChange={(value: string) => handleTextarea(value)}
           error={errorTextarea}
           value={textarea}
@@ -124,27 +124,27 @@ function Form() {
           icon="send"
           disabled={submitting || !name || !email || !textarea}
         >
-          Send message
+          Invia messaggio
         </Button>
         {submitting && (
           <Message>
             {' '}
             <LoaderIcon />
-            Sending in progress...
+            Invio in corso...
           </Message>
         )}
         {response === 'failed'
           && (
             <Message error>
               <ErrorIcon />
-              sending failed
+              Ops, si è verificato un errore.
             </Message>
           )}
         {response === 'success'
           && (
             <Message success>
               <SuccessIcon />
-              Successful submission
+              Messaggio inviato con successo!
             </Message>
           )}
       </ButtonWrap>

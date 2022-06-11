@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import favicon from '../assets/images/favicon.ico';
+import logo from '../assets/images/logo.png';
 
 function Seo() {
   const metaData = [
@@ -13,19 +15,19 @@ function Seo() {
     },
     {
       name: 'description',
-      content: 'Welcome to my personal portfolio, I\'m Lorenzo Faenzi and i\'m a front-end developer.',
+      content: 'Benvenuti, Mi chiamo Lorenzo Faenzi e sono un front-end developer. Mi occupo di sviluppo siti web e applicazioni.',
     },
     {
       name: 'image',
-      content: '',
+      content: logo,
     },
     {
       name: 'og:url',
-      content: '',
+      content: 'https://lorenzofaenzi.it',
     },
     {
       name: 'og:type',
-      content: 'article',
+      content: 'website',
     },
     {
       name: 'og:title',
@@ -37,7 +39,7 @@ function Seo() {
     },
     {
       name: 'og:image',
-      content: '',
+      content: logo,
     },
     {
       name: 'twitter:card',
@@ -57,18 +59,18 @@ function Seo() {
     },
     {
       name: 'twitter:image',
-      content: '',
+      content: logo,
     },
   ];
 
   const linkData = [
     {
       rel: 'shortcut icon',
-      href: '',
+      href: favicon,
     },
     {
       rel: 'apple-touch-icon',
-      href: 'icons/apple-touch-icon.png',
+      href: logo,
     },
   ];
   return (

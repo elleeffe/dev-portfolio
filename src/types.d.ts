@@ -1,3 +1,6 @@
 declare module '*.pdf'
 declare module '*.jpeg'
 declare module '*.jpg'
+declare module '*.svg'
+declare module '*.ico'
+declare module '*.png'
