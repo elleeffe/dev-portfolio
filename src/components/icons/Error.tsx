@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type IconProps = {
+type SvgProps = {
   className?: string;
 }
 
-function ErrorIcon({
-  className,
-}: IconProps) {
+function Error({
+  className = '',
+}: SvgProps) {
   return (
     <Svg
       className={className}
@@ -19,7 +19,7 @@ function ErrorIcon({
   );
 }
 
-export default ErrorIcon;
+export default Error;
 
 const Svg = styled.svg`
   transition: all 200ms ease;

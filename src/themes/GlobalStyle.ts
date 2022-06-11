@@ -75,5 +75,11 @@ html {
 ::placeholder, input, textarea {
   font-family: ${(props) => props.theme.fonts.girloy};
 }
+
+::selection {
+  background: ${(props) => props.theme.colors.success};
+  color: ${(props) => props.theme.colors.white};
+  opacity: 1
+}
 `;
 export default GlobalStyle;

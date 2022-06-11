@@ -5,7 +5,7 @@ type SvgProps = {
   className?: string;
 }
 
-function UserIcon({ className }: SvgProps) {
+function User({ className = '' }: SvgProps) {
   return (
     <Svg
       className={className}
@@ -21,7 +21,7 @@ function UserIcon({ className }: SvgProps) {
   );
 }
 
-export default UserIcon;
+export default User;
 
 const Svg = styled.svg`
   width: 20px;

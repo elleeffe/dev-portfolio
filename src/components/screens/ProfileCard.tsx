@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import Divider from './Divider';
-import { TitleH1 } from './Typography';
-import TextSlider from './TextSlider';
-import Button from './Button';
-import profile from '../assets/images/profilo.jpeg';
-import GithubIcon from './icons/Github';
-import LinkedinIcon from './icons/Linkedin';
-import codeBg from '../assets/images/code.jpg';
-import FacebookIcon from './icons/Facebook';
+import Divider from '../Divider';
+import { TitleH1 } from '../Typography';
+import TextSlider from '../TextSlider';
+import Button from '../Button';
+import profile from '../../assets/images/profilo.jpeg';
+import GithubIcon from '../icons/Github';
+import LinkedinIcon from '../icons/Linkedin';
+import codeBg from '../../assets/images/code.jpg';
+import FacebookIcon from '../icons/Facebook';
 
 type ProfileCardProps = {
   onClick: (num: number) => void;
@@ -24,8 +24,8 @@ function ProfileCard({ onClick }: ProfileCardProps) {
           <Divider />
         </BgDiv>
         <ButtonDiv>
-          <TitleH1>Jhon Doe</TitleH1>
-          <TextSlider words={['Front end developer', 'Web designer', 'Freelancer']} />
+          <TitleH1>Lorenzo Faenzi</TitleH1>
+          <TextSlider words={['Front end developer', 'Freelancer']} />
           <SocialLink href="#" target="_blank">
             <GithubIcon />
           </SocialLink>
@@ -36,8 +36,8 @@ function ProfileCard({ onClick }: ProfileCardProps) {
             <FacebookIcon />
           </SocialLink>
           <FlexWrap>
-            <Button outlined icon="download" href="#">Download cv</Button>
-            <Button outlined icon="send" href="#contact" onClick={() => onClick(4)}>Contact me</Button>
+            {/* <Button outlined icon="download" href="#">Download cv</Button> */}
+            <Button outlined icon="send" href="#contact" onClick={() => onClick(4)}>Hai bisogno di un developer?</Button>
           </FlexWrap>
         </ButtonDiv>
       </Profile>
@@ -205,18 +205,18 @@ const FlexWrap = styled.div`
     background: linear-gradient(90deg, rgba(49,49,58,1) 0%, rgba(255,255,255,0.1) 50%, rgba(49,49,58,1) 100%);
   }
 
-  &::before {
-    content: "";
-    height: 90%;
-    width: 1px;
-    position: absolute;
-    left: 50%;
-    top: 1px;
-    background: linear-gradient(0deg, rgba(49,49,58,1) 0%, rgba(255,255,255,0.1) 100%);
-  }
+  // &::before {
+  //   content: "";
+  //   height: 90%;
+  //   width: 1px;
+  //   position: absolute;
+  //   left: 50%;
+  //   top: 1px;
+  //   background: linear-gradient(0deg, rgba(49,49,58,1) 0%, rgba(255,255,255,0.1) 100%);
+  // }
 
   button, a {
-    width: 50%;
+    width: 100%;
     justify-content: center;
     height: 50px;
   }

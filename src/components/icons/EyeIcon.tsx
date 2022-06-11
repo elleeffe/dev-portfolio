@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type IconProps = {
+type SvgProps = {
   isText?: boolean;
   onClick?: () => void;
   className?: string;
 }
 
-function EyeIcon({ className, isText, onClick }: IconProps) {
+function Eye({ className = '', isText, onClick }: SvgProps) {
   if (isText) {
     return (
       <SvgClose
@@ -31,7 +31,7 @@ function EyeIcon({ className, isText, onClick }: IconProps) {
   );
 }
 
-export default EyeIcon;
+export default Eye;
 
 const SvgOpen = styled.svg`
     width: 20px;

@@ -86,6 +86,10 @@ export const Text = styled.p<TextProps>`
   word-break: break-word;
   margin-top: 5px;
 
+  & + & {
+    margin-top: 25px;
+  }
+
   @media ${(props) => props.theme.responsive.phone} {
     font-size: 14px;
     line-height: 26px;

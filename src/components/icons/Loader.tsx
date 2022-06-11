@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function LoaderIcon() {
+type SvgProps = {
+  className?: string;
+}
+
+function Loader({ className = '' }: SvgProps) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,6 +15,7 @@ function LoaderIcon() {
       viewBox="0 0 40 40"
       enableBackground="new 0 0 40 40"
       xmlSpace="preserve"
+      className={`${className} github`}
     >
       <path
         opacity="0.5"
@@ -38,7 +43,7 @@ function LoaderIcon() {
   );
 }
 
-export default LoaderIcon;
+export default Loader;
 
 const Svg = styled.svg`
     width: 30px;

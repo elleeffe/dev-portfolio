@@ -15,7 +15,19 @@ function WorksCard({ active }: ContentCardProps) {
     <ContentCard active={active} id="works">
       <TitleH3>My Projects</TitleH3>
       <FlexWrap>
-        <Preview />
+        <PreviewWrap>
+          <Preview />
+          <ButtonWrap>
+            <CustomButton href="#" outlined>
+              <GithubIcon />
+              Repository
+            </CustomButton>
+            <CustomButton href="#" outlined>
+              <WebsiteIcon />
+              Visita
+            </CustomButton>
+          </ButtonWrap>
+        </PreviewWrap>
         <div>
           <TitleH4 green>Random website</TitleH4>
           <Text>
@@ -24,18 +36,22 @@ function WorksCard({ active }: ContentCardProps) {
             Aenean ac nisi aliquet, euismod nisi eget,
             faucibus lectus.
           </Text>
-          <CustomButton href="#" outlined>
-            <GithubIcon />
-            view on github
-          </CustomButton>
-          <CustomButton href="#" outlined>
-            <WebsiteIcon />
-            visit the website
-          </CustomButton>
         </div>
       </FlexWrap>
       <FlexWrap>
-        <Preview />
+        <PreviewWrap>
+          <Preview />
+          <ButtonWrap>
+            <CustomButton href="#" outlined>
+              <GithubIcon />
+              Repository
+            </CustomButton>
+            <CustomButton href="#" outlined>
+              <WebsiteIcon />
+              Visita
+            </CustomButton>
+          </ButtonWrap>
+        </PreviewWrap>
         <div>
           <TitleH4 green>Random website</TitleH4>
           <Text>
@@ -44,14 +60,6 @@ function WorksCard({ active }: ContentCardProps) {
             Aenean ac nisi aliquet, euismod nisi eget,
             faucibus lectus.
           </Text>
-          <CustomButton href="#" outlined>
-            <GithubIcon />
-            view on github
-          </CustomButton>
-          <CustomButton href="#" outlined>
-            <WebsiteIcon />
-            visit the website
-          </CustomButton>
         </div>
       </FlexWrap>
     </ContentCard>
@@ -75,13 +83,16 @@ const FlexWrap = styled.div`
   }
 `;
 
+const PreviewWrap = styled.div`
+margin-right: 15px;
+`;
+
 const Preview = styled.div`
-  height: 200px;
-  width: 250px;
+  height: 150px;
+  width: 200px;
   background: ${(props) => props.theme.colors.dark};
   border-radius: 10px;
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
-  margin-right: 15px;
 
   @media ${(props) => props.theme.responsive.phoneMd} {
     width: 100%;
@@ -95,16 +106,19 @@ const Preview = styled.div`
   }
 `;
 
+const ButtonWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+`;
+
 const CustomButton = styled(Button)`
   font-weight: 400;
   margin-top: 15px;
-  font-size: 12px;
-  align-items: flex-start;
+  font-size: 11px;
+  align-items: center;
   display: flex;
-
-  & + & {
-    transform: translateX(-2px);
-  }
 
   svg {
     margin-right: 5px;

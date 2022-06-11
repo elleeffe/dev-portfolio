@@ -32,10 +32,10 @@ function Menu({ onClick, section, scrolling }: MenuProps) {
           <Image src={profilo} />
           <div>
             <Name>Jhon Doe</Name>
-            <Role>Web developer</Role>
+            <Role>Front-end developer</Role>
           </div>
         </Avatar>
-        <Logo>JD</Logo>
+        <Logo>LF</Logo>
       </AvatarWrap>
       <LinkWrap>
         <CardLink
@@ -45,7 +45,7 @@ function Menu({ onClick, section, scrolling }: MenuProps) {
           active={section === 1}
         >
           <UserIcon />
-          About me
+          Chi sono
         </CardLink>
         <CardLink
           data-section="resume"
@@ -53,7 +53,7 @@ function Menu({ onClick, section, scrolling }: MenuProps) {
           active={section === 2}
         >
           <ResumeIcon />
-          Resume
+          Esperienze
         </CardLink>
         <CardLink
           data-section="works"
@@ -61,7 +61,7 @@ function Menu({ onClick, section, scrolling }: MenuProps) {
           active={section === 3}
         >
           <WorkIcon />
-          Projects
+          Progetti
         </CardLink>
         <CardLink
           last
@@ -70,7 +70,7 @@ function Menu({ onClick, section, scrolling }: MenuProps) {
           active={section === 4}
         >
           <Email2Icon />
-          Contacts
+          Contatti
         </CardLink>
       </LinkWrap>
     </Wrapper>

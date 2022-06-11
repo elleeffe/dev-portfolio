@@ -5,7 +5,7 @@ type SvgProps = {
   className?: string;
 }
 
-function SendIcon({ className }: SvgProps) {
+function Send({ className = '' }: SvgProps) {
   return (
     <Svg
       className={className}
@@ -17,7 +17,7 @@ function SendIcon({ className }: SvgProps) {
   );
 }
 
-export default SendIcon;
+export default Send;
 
 const Svg = styled.svg`
   fill: none;

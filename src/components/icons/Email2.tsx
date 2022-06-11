@@ -5,7 +5,7 @@ type SvgProps = {
   className?: string;
 }
 
-function Email2Icon({ className }: SvgProps) {
+function Email2({ className = '' }: SvgProps) {
   return (
     <Svg
       viewBox="0 0 24 24"
@@ -17,7 +17,7 @@ function Email2Icon({ className }: SvgProps) {
   );
 }
 
-export default Email2Icon;
+export default Email2;
 
 const Svg = styled.svg`
   width: 20px;

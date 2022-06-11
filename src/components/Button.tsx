@@ -16,7 +16,7 @@ type ButtonProps = PropsWithChildren<{
 function Button({
   icon,
   children,
-  className,
+  className = '',
   disabled,
   outlined,
   href,
@@ -44,7 +44,7 @@ export default Button;
 
 const MyButton = styled.button<{ outlined?: boolean; disabled?: boolean }>`
   border: none;
-  opacity: 0.9;
+  opacity: ${({ disabled }) => (disabled ? 0.8 : 0.9)};
   padding: ${(props) => (props.outlined
     ? '0'
     : '12px 20px')
@@ -58,14 +58,15 @@ const MyButton = styled.button<{ outlined?: boolean; disabled?: boolean }>`
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.white};
   transition: all 200ms ease;
-  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   letter-spacing: 1px;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
+  border-radius: 5px;
 
   &:hover {
-    opacity: ${(props) => (props.disabled ? 0.9 : 1)};
+    opacity: ${(props) => (props.disabled ? 0.8 : 1)};
   }
 
   ${(props) => !props.disabled && `

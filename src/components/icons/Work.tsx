@@ -5,7 +5,7 @@ type SvgProps = {
   className?: string;
 }
 
-function WorkIcon({ className }: SvgProps) {
+function Work({ className = '' }: SvgProps) {
   return (
     <Svg
       className={className}
@@ -23,7 +23,7 @@ function WorkIcon({ className }: SvgProps) {
   );
 }
 
-export default WorkIcon;
+export default Work;
 
 const Svg = styled.svg`
   width: 20px;

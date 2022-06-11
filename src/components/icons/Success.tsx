@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type IconProps = {
+type SvgProps = {
   className?: string;
 }
 
-function SuccessIcon({
-  className,
-}: IconProps) {
+function Success({
+  className = '',
+}: SvgProps) {
   return (
     <Svg
       className={className}
@@ -19,7 +19,7 @@ function SuccessIcon({
   );
 }
 
-export default SuccessIcon;
+export default Success;
 
 const Svg = styled.svg`
   transition: all 200ms ease;

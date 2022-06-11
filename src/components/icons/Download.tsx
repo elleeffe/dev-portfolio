@@ -5,7 +5,7 @@ type SvgProps = {
   className?: string;
 }
 
-function DownloadIcon({ className }: SvgProps) {
+function Download({ className = '' }: SvgProps) {
   return (
     <Svg
       className={className}
@@ -20,7 +20,7 @@ function DownloadIcon({ className }: SvgProps) {
   );
 }
 
-export default DownloadIcon;
+export default Download;
 
 const Svg = styled.svg`
   width: 20px;

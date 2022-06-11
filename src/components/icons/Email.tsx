@@ -5,7 +5,7 @@ type SvgProps = {
   className?: string;
 }
 
-function EmailIcon({ className }: SvgProps) {
+function Email({ className = '' }: SvgProps) {
   return (
     <Svg
       className={className}
@@ -21,7 +21,7 @@ function EmailIcon({ className }: SvgProps) {
   );
 }
 
-export default EmailIcon;
+export default Email;
 
 const Svg = styled.svg`
   width: 20px;

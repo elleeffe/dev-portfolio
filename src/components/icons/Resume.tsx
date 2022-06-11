@@ -5,7 +5,7 @@ type SvgProps = {
   className?: string;
 }
 
-function ResumeIcon({ className }: SvgProps) {
+function Resume({ className = '' }: SvgProps) {
   return (
     <Svg
       className={className}
@@ -24,7 +24,7 @@ function ResumeIcon({ className }: SvgProps) {
   );
 }
 
-export default ResumeIcon;
+export default Resume;
 
 const Svg = styled.svg`
   width: 20px;
