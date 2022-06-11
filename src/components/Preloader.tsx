@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { TitleH2 } from './Typography';
 
 type PreloaderProps = {
   hide?: boolean;
@@ -9,7 +8,6 @@ type PreloaderProps = {
 function Preloader({ hide }: PreloaderProps) {
   return (
     <Wrap hide={hide}>
-      <TitleH2>Benvenuto/a</TitleH2>
       <Bar />
     </Wrap>
   );
