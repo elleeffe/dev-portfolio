@@ -31,7 +31,7 @@ function Seo() {
     },
     {
       name: 'og:title',
-      content: 'Lorenzo Faenzi | Portfolio',
+      content: 'Lorenzo Faenzi | Web developer',
     },
     {
       name: 'og:description',

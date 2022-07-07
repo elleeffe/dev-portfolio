@@ -5,7 +5,7 @@ import Email2Icon from './icons/Email2';
 import WorkIcon from './icons/Work';
 import ResumeIcon from './icons/Resume';
 import profilo from '../assets/images/profilo.jpeg';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo.svg';
 
 type MenuProps = {
   onClick: (num: number) => void;
