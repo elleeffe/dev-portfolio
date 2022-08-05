@@ -15,49 +15,31 @@ function ResumeCard({ active }: ContentCardProps) {
       <TitleH3>Developer experience</TitleH3>
       <FlexWrap>
         <div className="divider">
-          <DateTag present>Mar 2021 - present</DateTag>
-          <TitleH4>Tech &#38; Co.</TitleH4>
-          <TitleH5 green>Front-end developer</TitleH5>
+          <DateTag present>01/10/2021 - Oggi</DateTag>
+          <TitleH4>Impronta Advance srl</TitleH4>
+          <TitleH5 green>Junior front end developer</TitleH5>
           <Text>
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Aenean ac nisi aliquet, euismod nisi eget,
-            faucibus lectus.
+            Sviluppo front end di applicazioni e siti web responsive
+            principalmente tramite l'utilizzo di React, Next.js, Gatbsy.js e Typescript
           </Text>
         </div>
         <div>
-          <DateTag>Apr 2020 - Mar 2021</DateTag>
-          <TitleH4>Space - Web agency</TitleH4>
-          <TitleH5 green>Junior front-end developer</TitleH5>
+          <DateTag>01/03/2021 - 30/09/2021</DateTag>
+          <TitleH4>Impronta Advance srl</TitleH4>
+          <TitleH5 green>Stage formativo sviluppo front end</TitleH5>
           <Text>
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Aenean ac nisi aliquet, euismod nisi eget,
-            faucibus lectus.
+            Studio e formazione finalizzati allo sviluppo di siti
+            web e applicazioni tramite l'utilizzo di tecnologie Javascript.
           </Text>
         </div>
       </FlexWrap>
       <FlexWrap>
         <div className="divider">
-          <DateTag>Jun 2020 - Feb 2021</DateTag>
-          <TitleH4>Web Lab - Tech solution</TitleH4>
-          <TitleH5 green>Junior front-end developer</TitleH5>
+          <DateTag>01/12/2019 - 30/09/2020</DateTag>
+          <TitleH4>Codenjine</TitleH4>
+          <TitleH5 green>Web developer</TitleH5>
           <Text>
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Aenean ac nisi aliquet, euismod nisi eget,
-            faucibus lectus.
-          </Text>
-        </div>
-        <div>
-          <DateTag>Mar 2019 - Dec 2020</DateTag>
-          <TitleH4>Freelance</TitleH4>
-          <TitleH5 green>Junior front-end developer</TitleH5>
-          <Text>
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Aenean ac nisi aliquet, euismod nisi eget,
-            faucibus lectus.
+            Sviluppo siti web responsive tramite l'utilizzo di tecnologie Javascript.
           </Text>
         </div>
       </FlexWrap>

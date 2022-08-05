@@ -18,9 +18,9 @@ function ContactCard({ active }: ContentCardProps) {
         <div>
           <TitleH5 green>Email:</TitleH5>
           <IconLink
-            href="#"
+            href="mailto:faenzilorenzo@gmail.com"
           >
-            info@developer.com
+            faenzilorenzo@gmail.com
           </IconLink>
         </div>
         <div>
@@ -28,7 +28,7 @@ function ContactCard({ active }: ContentCardProps) {
           <IconLink
             href="#"
           >
-            +39 3667890123
+            +39 3423757625
           </IconLink>
         </div>
       </FlexWrap>

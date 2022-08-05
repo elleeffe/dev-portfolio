@@ -5,6 +5,8 @@ import { TitleH3, TitleH4, Text } from '../Typography';
 import Button from '../Button';
 import GithubIcon from '../icons/Github';
 import WebsiteIcon from '../icons/Website';
+import logo from '../../assets/images/logo-green.svg';
+import useWebCamera from '../../assets/images/use-web-camera.png';
 
 type ContentCardProps = {
   active: boolean;
@@ -13,53 +15,52 @@ type ContentCardProps = {
 function WorksCard({ active }: ContentCardProps) {
   return (
     <ContentCard active={active} id="works">
-      <TitleH3>My Projects</TitleH3>
+      <TitleH3>Repo open source</TitleH3>
       <FlexWrap>
         <PreviewWrap>
-          <Preview />
+          <Preview><img src={logo} alt="preview" /></Preview>
+        </PreviewWrap>
+        <div>
+          <TitleH4 green>Il mio portfolio</TitleH4>
+          <Text>
+            Si, è il sito che stai navigando adesso.
+            &#200; stato realizzato utilizzando Gatbsy.js, Typescript e
+            Styled-components, dai un occhio alla repo ;)
+          </Text>
           <ButtonWrap>
-            <CustomButton href="#" outlined>
+            <CustomButton href="https://github.com/elleeffe/portfolio" outlined>
               <GithubIcon />
               Repository
             </CustomButton>
-            <CustomButton href="#" outlined>
+            {/* <CustomButton href="#" outlined>
               <WebsiteIcon />
               Visita
-            </CustomButton>
+            </CustomButton> */}
           </ButtonWrap>
-        </PreviewWrap>
-        <div>
-          <TitleH4 green>Random website</TitleH4>
-          <Text>
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Aenean ac nisi aliquet, euismod nisi eget,
-            faucibus lectus.
-          </Text>
         </div>
       </FlexWrap>
       <FlexWrap>
         <PreviewWrap>
-          <Preview />
+          <Preview>
+            <img src={useWebCamera} alt="preview" />
+          </Preview>
+        </PreviewWrap>
+        <div>
+          <TitleH4 green>Use web camera</TitleH4>
+          <Text>
+            Scatta una foto o un video direttamente dal browser, semplice.
+            Single page application creata con React e Typescript.
+          </Text>
           <ButtonWrap>
-            <CustomButton href="#" outlined>
+            <CustomButton href="https://github.com/elleeffe/use-web-camera" outlined>
               <GithubIcon />
               Repository
             </CustomButton>
-            <CustomButton href="#" outlined>
+            <CustomButton href="https://use-web-camera.vercel.app/" outlined>
               <WebsiteIcon />
               Visita
             </CustomButton>
           </ButtonWrap>
-        </PreviewWrap>
-        <div>
-          <TitleH4 green>Random website</TitleH4>
-          <Text>
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Aenean ac nisi aliquet, euismod nisi eget,
-            faucibus lectus.
-          </Text>
         </div>
       </FlexWrap>
     </ContentCard>
@@ -88,11 +89,19 @@ margin-right: 15px;
 `;
 
 const Preview = styled.div`
-  height: 150px;
-  width: 200px;
-  background: ${(props) => props.theme.colors.dark};
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  background: ${({ theme }) => theme.colors.dark};
+
+  img {
+    max-width: 80%;
+    border-radius: 10px;
+  }
 
   @media ${(props) => props.theme.responsive.phoneMd} {
     width: 100%;

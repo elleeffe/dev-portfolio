@@ -4,7 +4,7 @@ import Divider from '../Divider';
 import { TitleH1 } from '../Typography';
 import TextSlider from '../TextSlider';
 import Button from '../Button';
-import profile from '../../assets/images/profilo.jpeg';
+import profile from '../../assets/images/foto-profilo.jpeg';
 import GithubIcon from '../icons/Github';
 import LinkedinIcon from '../icons/Linkedin';
 import codeBg from '../../assets/images/code.jpg';

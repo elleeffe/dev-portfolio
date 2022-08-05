@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import favicon from '../assets/images/favicon.ico';
+import favicon from '../assets/images/favicon-white.ico';
 import logo from '../assets/images/logo.png';
 
 function Seo() {

@@ -33,7 +33,7 @@ function Form() {
       return;
     }
     setSubmitting(true);
-    await sleep(1500);
+    await sleep(1000);
     setSubmitting(false);
     setResponse('success');
     setTimeout(() => {
